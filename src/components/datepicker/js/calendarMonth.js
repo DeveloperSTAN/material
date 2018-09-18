@@ -102,6 +102,23 @@
       });
     };
 
+    this.cellHoverHandler = function() {
+        var elem = angular.element(this);
+        // elem.addClass('tooltip');
+        // self.$scope.$apply(function() {
+        //     var event = self.calendarCtrl.events[0].title;
+        //     elem.attr('data-value', event);
+        // });
+        elem.find('div').addClass('visible');
+    };
+
+    this.cellReleaseHandler = function() {
+        var elem = angular.element(this);
+        // elem.removeClass('tooltip');
+        elem.find('div').removeClass('visible');
+
+    };
+
     /**
      * Handles click events on the month headers. Switches
      * the calendar to the year view.
