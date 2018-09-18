@@ -17,8 +17,8 @@
   background-color: rgb(97,97,97);
   padding: 5px;
   visibility: hidden;
-  width: 50px;
-  min-width: 50px;
+  width: 150px;
+  min-width: 150px;
   border-radius: 4px;
   z-index: 2147483647 !important;
 }
@@ -26,7 +26,49 @@
   padding: 0;
   margin: 0;
   word-break: break-all;
+  font-size: 12px;
+  &::before {
+    content: ' \25B8  ';
+  }
 }
 .visible {
   visibility: visible;
+}
+
+td.md-calendar-date {
+  &:nth-child(1) {
+    .tooltip {
+      left: 11px;
+    }
+  }
+  &:nth-child(2) {
+    .tooltip {
+      left: -54px;
+    }
+  }
+  &:nth-child(3) {
+    .tooltip {
+      left: -58px;
+    }
+  }
+  &:nth-child(4) {
+    .tooltip {
+      left: -58px;
+    }
+  }
+  &:nth-child(5) {
+    .tooltip {
+      left: -55px;
+    }
+  }
+  &:nth-child(6) {
+    .tooltip {
+      left: -64px;
+    }
+  }
+  &:nth-child(7) {
+    .tooltip {
+      left: -108px;
+    }
+  }
 }

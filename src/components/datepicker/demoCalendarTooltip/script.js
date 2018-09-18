@@ -5,13 +5,18 @@ angular.module('calendarTooltipDemo', ['ngMaterial'])
     today.setHours(0, 0, 0, 0);
 
     var moreDate = new Date();
-    moreDate.setDate(moreDate.getDate() + 5);
+    moreDate.setDate(moreDate.getDate() + 7);
     moreDate.setHours(0, 0, 0, 0);
 
     this.events = [
       {
         title: 'John doe birythday',
         startDate: today
+      },
+      {
+          title: 'Jane doe birythday',
+          startDate: today,
+          endDate: moreDate
       },
       {
           title: 'Jane doe birythday',
