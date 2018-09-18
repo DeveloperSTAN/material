@@ -29,7 +29,8 @@
       getYearDistance: getYearDistance,
       clampDate: clampDate,
       getTimestampFromNode: getTimestampFromNode,
-      isMonthWithinRange: isMonthWithinRange
+      isMonthWithinRange: isMonthWithinRange,
+      getEvents: getEvents
     };
 
     /**
@@ -306,6 +307,30 @@
 
        return (!minDate || minDate.getFullYear() < year || minDate.getMonth() <= month) &&
         (!maxDate || maxDate.getFullYear() > year || maxDate.getMonth() >= month);
+     }
+
+     /**
+      * Check if date has an event.
+      * @param {Date} date 
+      * @param {Array<Object>} eventDates 
+      */
+     function getEvents(date, eventDates) {
+       console.log(eventDates);
+       var hasEvent = false;
+       for (var i = 0; i < eventDates.length; i++) {
+        var startDate = eventDates[i].startDate;
+        var endDate = eventDates[i].endDate;
+
+        if (endDate) {
+          if (this.isDateWithinRange(date, startDate, endDate)) {
+            hasEvent = true;
+          }
+        } else if (this.isSameDay(date, startDate)) {
+          hasEvent = true;
+        }
+       }
+
+       return hasEvent;
      }
   });
 })();

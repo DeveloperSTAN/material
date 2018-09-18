@@ -62,6 +62,7 @@
         minDate: '=mdMinDate',
         maxDate: '=mdMaxDate',
         dateFilter: '=mdDateFilter',
+        events: '<mdEvents',
 
         // These need to be prefixed, because Angular resets
         // any changes to the value due to bindToController.
@@ -133,6 +134,9 @@
 
     /** @type {!angular.NgModelController} */
     this.ngModelCtrl = null;
+
+    /** @type {String} Class applied to the cell for date/s with an event. */
+    this.EVENT_CLASS = 'md-calendar-date-event';
 
     /** @type {String} Class applied to the selected date cell. */
     this.SELECTED_DATE_CLASS = 'md-calendar-selected-date';
