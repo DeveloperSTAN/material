@@ -1,0 +1,30 @@
+md-content {
+  h1:first-child {
+    margin-top: 0;
+  }
+}
+md-input-container {
+  padding-bottom: 0;
+}
+.remove-tab {
+  margin-bottom: 40px;
+}
+.demo-tab > div > div {
+  padding: 25px;
+  box-sizing: border-box;
+}
+.edit-form input {
+  width: 100%;
+}
+md-tab[disabled] {
+  opacity: 0.5;
+}
+label {
+  text-align: left;
+}
+.long > input {
+  width: 264px;
+}
+.md-button.add-tab {
+  transform: translateY(5px);
+}

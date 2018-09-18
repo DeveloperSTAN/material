@@ -1,0 +1,80 @@
+.datepickerdemoCalendarTooltip .md-calendar-date.md-calendar-selected-date.md-calendar-date-event .md-calendar-date-selection-indicator,
+.datepickerdemoCalendarTooltip .md-calendar-date.md-calendar-date-today.md-calendar-date-event .md-calendar-date-selection-indicator,
+.datepickerdemoCalendarTooltip .md-calendar-date.md-calendar-date-today.md-calendar-selected-date.md-calendar-date-event .md-calendar-date-selection-indicator,
+.datepickerdemoCalendarTooltip .md-calendar-date.md-calendar-date-event .md-calendar-date-selection-indicator {
+  background-color: #f2f2f2;
+  color: #000; }
+
+.datepickerdemoCalendarTooltip .md-calendar-date {
+  position: relative !important; }
+
+.datepickerdemoCalendarTooltip .tooltip {
+  position: absolute;
+  top: 47px;
+  left: -7px;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #616161;
+  padding: 5px;
+  visibility: hidden;
+  width: 150px;
+  min-width: 150px;
+  border-radius: 4px;
+  z-index: 2147483647 !important; }
+  .datepickerdemoCalendarTooltip .tooltip:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #616161;
+    left: 79px;
+    top: -9px;
+    transform: rotateZ(90deg); }
+
+.datepickerdemoCalendarTooltip .tooltip p {
+  padding: 0;
+  margin: 0;
+  word-break: break-all;
+  font-size: 12px; }
+  .datepickerdemoCalendarTooltip .tooltip p::before {
+    content: ' \25B8  '; }
+
+.datepickerdemoCalendarTooltip .visible {
+  visibility: visible; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(1) .tooltip {
+  left: 11px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(1) .tooltip:before {
+    left: 24px; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(2) .tooltip {
+  left: -54px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(2) .tooltip:before {
+    left: 72px; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(3) .tooltip {
+  left: -58px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(3) .tooltip:before {
+    left: 76px; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(4) .tooltip {
+  left: -58px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(4) .tooltip:before {
+    left: 76px; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(5) .tooltip {
+  left: -55px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(5) .tooltip:before {
+    left: 73px; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(6) .tooltip {
+  left: -64px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(6) .tooltip:before {
+    left: 82px; }
+
+.datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(7) .tooltip {
+  left: -108px; }
+  .datepickerdemoCalendarTooltip td.md-calendar-date:nth-child(7) .tooltip:before {
+    left: 126px; }
