@@ -315,7 +315,6 @@
       * @param {Array<Object>} eventDates 
       */
      function getEvents(date, eventDates) {
-       console.log(eventDates);
        var hasEvent = false;
        for (var i = 0; i < eventDates.length; i++) {
         var startDate = eventDates[i].startDate;
