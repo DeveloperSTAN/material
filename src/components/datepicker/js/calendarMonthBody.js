@@ -145,6 +145,11 @@
         cell.classList.add('md-calendar-date-disabled');
         cell.textContent = cellText;
       }
+
+      if (calendarCtrl.events && this.dateUtil.getEvents(opt_date, calendarCtrl.events)) {
+        // Add event class to cell.
+        cell.classList.add(calendarCtrl.EVENT_CLASS);
+      }
     }
 
     return cell;
