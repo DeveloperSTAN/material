@@ -1,0 +1,32 @@
+.md-calendar-date.md-calendar-selected-date.md-calendar-date-event .md-calendar-date-selection-indicator,
+.md-calendar-date.md-calendar-date-today.md-calendar-date-event .md-calendar-date-selection-indicator,
+.md-calendar-date.md-calendar-date-today.md-calendar-selected-date.md-calendar-date-event .md-calendar-date-selection-indicator,
+.md-calendar-date.md-calendar-date-event .md-calendar-date-selection-indicator {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.md-calendar-date {
+  position: relative !important;
+}
+.tooltip {
+  position: absolute;
+  top: 47px;
+  left: -7px;
+  color: rgba(255,255,255,0.87);
+  background-color: rgb(97,97,97);
+  padding: 5px;
+  visibility: hidden;
+  width: 50px;
+  min-width: 50px;
+  border-radius: 4px;
+  z-index: 2147483647 !important;
+}
+.tooltip p {
+  padding: 0;
+  margin: 0;
+  word-break: break-all;
+}
+.visible {
+  visibility: visible;
+}
