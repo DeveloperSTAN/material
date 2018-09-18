@@ -137,6 +137,7 @@
         selectionIndicator.textContent = cellText;
         cell.appendChild(selectionIndicator);
         cell.addEventListener('click', monthCtrl.cellClickHandler);
+        cell.addEventListener('mouseleave', monthCtrl.cellReleaseHandler);
 
         if (calendarCtrl.displayDate && this.dateUtil.isSameDay(opt_date, calendarCtrl.displayDate)) {
           this.focusAfterAppend = cell;
@@ -145,6 +146,33 @@
         cell.classList.add('md-calendar-date-disabled');
         cell.textContent = cellText;
       }
+
+        if (calendarCtrl.events && this.dateUtil.getEvents(opt_date, calendarCtrl.events)) {
+            // Add event class to cell
+            cell.classList.add(calendarCtrl.EVENT_CLASS);
+
+            var toolTip = document.createElement('div');
+            toolTip.classList.add('tooltip');
+
+            cell.appendChild(toolTip);
+
+            var eventDates = calendarCtrl.events;
+            for (var i = 0; i < eventDates.length; i++) {
+                var eventTitle = eventDates[i].title;
+                var startDate = eventDates[i].startDate;
+                var endDate = eventDates[i].endDate;
+
+                var text = document.createElement('p');
+
+                if ((endDate && this.dateUtil.isDateWithinRange(opt_date, startDate, endDate)) ||
+                    (this.dateUtil.isSameDay(opt_date, startDate))) {
+                    text.innerHTML = eventTitle;
+                    toolTip.appendChild(text);
+                }
+            }
+
+            cell.addEventListener('mouseenter', monthCtrl.cellHoverHandler);
+        }
     }
 
     return cell;
